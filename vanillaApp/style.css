@@ -5,8 +5,9 @@
 }
 
 body {
-  background-color: blue;
+  background-color: #16a085;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -14,9 +15,9 @@ body {
 }
 
 #app {
-  padding: 40px 30px;
+  padding: 50px 50px;
   padding-bottom: 20px;
-  width: 450px;
+  width: 500px;
   border-radius: 3px;
   background-color: aliceblue;
   display: flex;
@@ -69,7 +70,7 @@ body {
   margin-right: 5px;
   height: 40px;
   color: white;
-  background-color: black;
+  background-color: #16a085;
   border-radius: 3px;
   margin-top: 40px;
 
@@ -90,7 +91,35 @@ a>i {
   margin-left: auto;
   margin-right: 40px;
   width: 90px;
+  border: none;
 
+}
+
+#signature-footer {
+  margin-top: 10px;
+  color: aliceblue;
+
+  a {
+    text-decoration: none;
+    color: aliceblue;
+    font-style: italic;
+  }
+
+}
+
+/* Transition color and text*/
+
+body,
+#quote-container,
+#author,
+.btn {
+  transition: background-color 1s ease, color 1s ease;
+}
+
+#quote-container,
+#author {
+  transition: opacity 0.5s ease;
+  opacity: 1;
 }
 
 /* Responsive styles */
