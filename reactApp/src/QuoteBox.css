@@ -65,13 +65,3 @@ a>i {
     border: none;
 
 }
-
-.signature-footer {
-    color: aliceblue;
-
-    a {
-        text-decoration: none;
-        color: aliceblue;
-        font-style: italic;
-    }
-}

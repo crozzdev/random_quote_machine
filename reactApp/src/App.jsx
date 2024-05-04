@@ -27,11 +27,11 @@ export function App() {
     const [twitterHref, setTwitterHref] = useState("#")
     const [color, setColor] = useState(colorClasses[0])
     const [quote, setQuote] = useState({ quote: "", author: "" })
-    const [transitioning, setTransitioning] = useState(false);
+    const [isTransitioning, setIsTransitioning] = useState(false);
 
     const fetchQuote = useCallback(async () => {
         try {
-            setTransitioning(true);
+            setIsTransitioning(true)
             const res = await fetch(URLQUOTES);
             const data = await res.json();
             const randomIndexQuote = Math.floor(Math.random() * data.quotes.length);
@@ -39,11 +39,12 @@ export function App() {
             const selectedQuote = data.quotes[randomIndexQuote];
             const twitterUri = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + selectedQuote.quote + '"' + selectedQuote.author);
             setTwitterHref(twitterUri);
+            setColor(colorClasses[randomIndexColor]);
             setTimeout(() => {
                 setQuote(selectedQuote);
-                setColor(colorClasses[randomIndexColor]);
-                setTransitioning(false);
-            }, 1000);
+                setIsTransitioning(false); // End transition
+            }, 500);
+
         } catch (err) {
             console.log(err);
         }
@@ -59,7 +60,7 @@ export function App() {
 
     return (
         <div className={`app ${color[0]}`}>
-            <QuoteBox quote={quote.quote} author={quote.author} changeQuote={changeQuote} colorBg={color[0]} colorTxt={color[1]} twitterHref={twitterHref} transition={transitioning} />
+            <QuoteBox quote={quote.quote} author={quote.author} changeQuote={changeQuote} colorBg={color[0]} colorTxt={color[1]} twitterHref={twitterHref} transition={isTransitioning} />
             <p className="signature-footer">Created with love by <a href="https://github.com/crozzdev" target="_blank">CrozzDev </a><i className="fa fa-heart"></i></p>
         </div>
     )

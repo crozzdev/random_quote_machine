@@ -135,17 +135,20 @@
 
 .app,
 .btn {
-    transition: background-color 1s ease, color 1s ease;
+    transition: background-color 1.5s ease-in-out;
 }
 
 .quote-container,
 .author {
-    transition: opacity 1s ease-in-out;
+    opacity: 1;
 }
 
-.transitioning {
-    opacity: 0;
+.transition {
+    color: white !important;
+    transition: color 0.5s ease-in-out;
 }
+
+
 
 /* Responsive styles */
 @media screen and (max-width: 480px) {

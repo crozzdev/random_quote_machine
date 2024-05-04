@@ -3,8 +3,7 @@ import './QuoteBox.css'
 import { SocialButton } from "./SocialButton";
 
 export function QuoteBox({ quote, author, colorBg, colorTxt, changeQuote, twitterHref, transition }) {
-
-    const transitionClass = transition ? 'transitioning' : ''
+    const transitionClass = transition ? 'transition' : ''
 
     return (
         <div className='quote-box'>

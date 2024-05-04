@@ -9,3 +9,13 @@
   align-items: center;
   justify-content: center;
 }
+
+.signature-footer {
+  color: aliceblue;
+
+  a {
+    text-decoration: none;
+    color: aliceblue;
+    font-style: italic;
+  }
+}
