@@ -1,0 +1,77 @@
+.quote-container {
+    color: black;
+    width: 500px;
+    height: auto;
+    text-align: center;
+    font-size: 1.75em;
+    font-weight: 500;
+    padding: 0 20px;
+
+}
+
+.quote-container>.fa-quote-left {
+    position: relative;
+    top: -10px;
+    right: 5px;
+}
+
+.quote-container>.fa-quote-right {
+    position: relative;
+    bottom: -20px;
+    left: 5px;
+}
+
+.author {
+    padding-top: 20px;
+    margin-left: auto;
+}
+
+
+
+.buttons {
+    display: flex;
+    width: 450px;
+    margin-left: 40px;
+    margin-top: 40px;
+
+
+}
+
+.btn {
+    margin-right: 5px;
+    height: 40px;
+    color: white;
+    background-color: #16a085;
+    border-radius: 3px;
+    margin-top: 40px;
+
+}
+
+a>i {
+    margin-top: 8px;
+}
+
+.social-media {
+    text-align: center;
+    font-size: 1.5em;
+    width: 50px;
+
+}
+
+.new-quote {
+    margin-left: auto;
+    margin-right: 40px;
+    width: 90px;
+    border: none;
+
+}
+
+.signature-footer {
+    color: aliceblue;
+
+    a {
+        text-decoration: none;
+        color: aliceblue;
+        font-style: italic;
+    }
+}
